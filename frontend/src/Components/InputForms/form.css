@@ -1,0 +1,22 @@
+.forms{
+    display: flex;
+    width: 70vh;
+    height: fit-content;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 1rem;
+    float: left;
+    flex-direction: column;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
+
+}
+.forms h3{
+color: #0c0c0c;
+
+}

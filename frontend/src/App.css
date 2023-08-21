@@ -1,0 +1,187 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  
+}
+body{
+  overflow: hidden;
+}
+
+/*Main App Style*/
+.App{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+gap: 2px;
+  background-color: #f0f0f0; ;
+}
+/*Main App Style ends*/
+
+
+
+/*Header Style Starts*/
+.Header{
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  background-size: 100%;
+  color: white;
+  justify-content: space-between;
+  padding:10px  40px;
+  background-color: #f0f0f0;;
+  height: 8vh;
+
+}
+
+.Header .profile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  
+}
+.profiletxt{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+}
+/*Header Style Ends*/
+
+
+
+/*Main Style Starts*/
+
+.Main{
+  display: flex;
+  flex: 1;
+  width: 110vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color:  #f0f0f0; ;
+  
+}
+.content{
+  width: 90vw;
+}
+
+
+/*Navbar Style Starts*/
+
+.Navbar{
+  background-color: #0c0c0e;
+width: fit-content;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-items: center;
+gap: 1rem;
+padding-top: 3rem;
+
+}
+
+.nav{
+  background-color: #0c0c0e;
+    max-width: 16vw;
+   color:white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+    gap: 1rem;
+}
+
+/*Navbar Style Ends*/
+
+
+
+/*Content Style Starts*/
+
+.Content{
+  flex: 1;
+
+}
+/*Content Style Ends*/
+
+
+
+/*Main Style Ends*/
+
+/*Dashboard Style Starts*/
+.dashboard{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 15px;
+margin-top: 15px;
+}
+.dashboard .up{
+  display: flex;
+flex-direction: row;
+gap: 15px;
+justify-content: space-between;
+}
+.dashboard .up .left{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+.dashboard .up .right{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:15px;
+}
+/*Dashboard Style Ends*/
+
+/*Analysis Style Starts*/
+.Analysis{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 15px;
+  }
+.analysis{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+  }
+  /*Analysis Style Ends*/
+  /*Dashboard Style Starts*/
+.others{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  }
+  .others .up{
+    display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  }
+  .others .up .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /*Dashboard Style Ends*/
+  
