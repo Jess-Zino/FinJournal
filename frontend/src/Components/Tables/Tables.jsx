@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
 import { Table} from 'antd';
 import './Table.css';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 
-const DashTable = () => {
+const Tables = ({options}) => {
   const { Column, ColumnGroup } = Table;
   const [data, setData] = useState([]);
   
-  const fetchData = (username) => {
-    return axios.get(`http://localhost:3000/transaction/${username}`)
+  const fetchData = (username, option) => {
+    return axios.get(`http://localhost:3000/transactions/${username}/${option}`)
       .then((response) => response.data)
       .catch((error) => {
         console.error(error);
@@ -19,17 +20,16 @@ const DashTable = () => {
   useEffect(() => {
     const username = localStorage.getItem('user');
     if (username) {
-      fetchData(username)
+      fetchData(username, options)
         .then((fetchedData) => {
           setData(fetchedData);
         });
     }
-  }, []);
+  });
 
   return (
-    <Table pagination={{ pageSize: 3,className: "pagination"}} dataSource={data} rowClassName='tableRow' style={{background:"#202125"}} key={data._id}>
-      <ColumnGroup title="Recent Transactions"key={data._id}>
-      <Column title="Transaction" dataIndex="option" key="option" />
+    <Table pagination={false}  pageSize={2}  dataSource={data} rowClassName='tableRow' style={{background:"#202125"}} key="_id">
+      <ColumnGroup title="Recent Transactions" key="_id">
       <Column title="Amount" dataIndex="amount" key="amount" />
       <Column title="Category" dataIndex="selectedcategory" key="selectedcategory" />
 
@@ -39,4 +39,7 @@ const DashTable = () => {
   );
 };
 
-export default DashTable;
+export default Tables;
+Tables.propTypes = {
+    options: PropTypes.string
+}

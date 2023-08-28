@@ -7,5 +7,5 @@ const BubbleLarge = ({content}) => {
 
 export default BubbleLarge
 BubbleLarge.propTypes ={
-  content: propTypes.string.isRequired
+  content: propTypes.element
 }

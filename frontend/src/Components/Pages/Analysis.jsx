@@ -1,6 +1,7 @@
 import Header from "../Header/Header"
 import BubbleContain from '../Bubbles/BubbleContain'
 import FadeIn from "../PageContent/Fadein"
+import AnalysisTable from "../Tables/AnalysisTable"
 //import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 //import { Doughnut } from 'react-chartjs-2';
 
@@ -37,7 +38,7 @@ const Analysis = () => {
       <Header name="Analysis" />
       <FadeIn>
       <div className="analysis">
-        <BubbleContain />
+        <BubbleContain content={<AnalysisTable/>} />
      {/* <Doughnut style={{width: '100%', height: '80vh'}} data={data}/>*/}
       </div>
       </FadeIn>

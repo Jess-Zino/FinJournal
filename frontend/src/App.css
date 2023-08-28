@@ -16,7 +16,7 @@ body{
   width: 100vw;
   height: 100vh;
 gap: 2px;
-  background-color: #f0f0f0; ;
+  background-color: #16171b; ;
 }
 /*Main App Style ends*/
 
@@ -31,7 +31,7 @@ gap: 2px;
   color: white;
   justify-content: space-between;
   padding:10px  40px;
-  background-color: #f0f0f0;;
+  background-color: #16171b;;
   height: 8vh;
 
 }
@@ -64,7 +64,7 @@ gap: 2px;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  background-color:  #f0f0f0; ;
+  background-color:  #16171b; ;
   
 }
 .content{
@@ -75,7 +75,7 @@ gap: 2px;
 /*Navbar Style Starts*/
 
 .Navbar{
-  background-color: #0c0c0e;
+  background-color: #202125;
 width: fit-content;
 display: flex;
 flex-direction: column;
@@ -87,7 +87,7 @@ padding-top: 3rem;
 }
 
 .nav{
-  background-color: #0c0c0e;
+  background-color: #202125;
     max-width: 16vw;
    color:white;
     text-align: center;
@@ -122,7 +122,6 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 gap: 15px;
-margin-top: 15px;
 }
 .dashboard .up{
   display: flex;

@@ -8,7 +8,7 @@ const BubbleContain = ({content}) => {
 export default BubbleContain
 
 BubbleContain.propTypes = {
-  content: PropTypes.element.isRequired, 
-  location: PropTypes.string.isRequired,
-  colors:PropTypes.string.isRequired
+  content: PropTypes.element, 
+  location: PropTypes.string,
+  colors:PropTypes.string
 };

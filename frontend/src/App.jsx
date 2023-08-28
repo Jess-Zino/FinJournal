@@ -1,17 +1,10 @@
-import {Space} from 'antd'
 import './App.css'
-import Navbar from './Components/Navbar/Navbar'
-import PageContent from './Components/PageContent/PageContent'
+import MainAppRoutes from './Components/Routes/MainAppRoutes'
 function App() {
-  
   return (
-    <div className='App'>
-             <Navbar/>
-      <Space className='Main'>
-        <PageContent className='content'/>
-      </Space>
-      
-    </div>
+     <div className="App">
+    <MainAppRoutes/>
+   </div>
   )
 }
 

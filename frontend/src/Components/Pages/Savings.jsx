@@ -3,49 +3,26 @@ import BubbleLarge from '../Bubbles/BubbleLarge'
 import BubbleFull from '../Bubbles/BubbleFull'
 import BubbleBtn from '../Bubbles/BubbleBtn'
 import BubbleContain from '../Bubbles/BubbleContain'
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Doughnut } from 'react-chartjs-2';
 import FadeIn from "../PageContent/Fadein"
 import { Tabs } from 'antd';
 import Add from '../InputForms/Add'
 import Update from '../InputForms/Update'
 import Category from '../InputForms/Category'
 import { useState } from "react"
+import Tables from "../Tables/Tables"
+import DoughnutChartCategory from "../Tables/DoughnutChartCategory"
+import Graphs from "../Tables/Graphs"
 const Savings = () => {
   const [add, setAdd] = useState(false)
   const [category, setCategory] = useState(false)
   const [update, setUpdate] = useState(false)
-  const data = {
-    labels: ['Savings', 'Debt', 'Income', 'Savings'],
-    datasets: [
-      {
-        label: '# of Votes',
-        data: [1, 1, 1, 1],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
 
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-
-        ],
-        borderWidth: 1,
-      },
-    ],
-  };
-  ChartJS.register(ArcElement, Tooltip, Legend);
   return (
     <div>
       <Header name="Savings" />
       <FadeIn>
    <Tabs
-   style={{color:"#151618", fontFamily:"Montserrat"}}
+   style={{color:"white", fontFamily:"Montserrat"}}
     defaultActiveKey="1"
     centered
     items={[{
@@ -62,7 +39,7 @@ const Savings = () => {
          <div className="others">
         <div className="up">
         <div className="left">
-        <BubbleLarge/>
+        <BubbleLarge content={<DoughnutChartCategory options="Savings"/>}/>
          </div>
          <div className="right">
           <BubbleBtn location="Savings" operation="Add" colors="#FB4141" click={()=>setAdd(true)}/>
@@ -71,11 +48,11 @@ const Savings = () => {
          </div>
          </div>
          <div className="down">
-          <BubbleFull/>
+          <BubbleFull content={<Tables options="Income"/>}/>
          </div>
          </div>
-         <Add trigger={add} props="Add Expense" click={()=>setAdd(false)}/>
-        <Category trigger={category} props="Add Expense" click={()=>setCategory(false)}/>
+         <Add trigger={add}  option="Savings" props="Add to Savings" click={()=>setAdd(false)}/>
+        <Category trigger={category} props="Add Expense" click={()=>setCategory(false)} option="Savings"/>
         <Update trigger={update} props="Add Expense" click={()=>setUpdate(false)}/>
          </FadeIn>,
       },
@@ -83,14 +60,14 @@ const Savings = () => {
         label: `Monthly Savings`,
         key: 2,
         children:<FadeIn>
-        <div className="analysis"> <BubbleContain /></div>
+        <div className="analysis"> <BubbleContain content={<Graphs optio="Savings"/>}/></div>
         </FadeIn>, 
       },
       {
         label: `Category Analysis`,
         key: 3,
         children: <FadeIn>
-        <div className="analysis"> <BubbleContain content={<Doughnut style={{width: '100%', height: '80vh'}} data={data}/>}/></div>
+        <div className="analysis"> <BubbleContain content={<DoughnutChartCategory options="Savings"/>} /></div>
         </FadeIn>,
       }
      

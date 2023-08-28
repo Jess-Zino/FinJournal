@@ -3,7 +3,7 @@ import { Table} from 'antd';
 import './Table.css';
 import axios from 'axios';
 
-const DashTable = () => {
+const AnalysisTable = () => {
   const { Column, ColumnGroup } = Table;
   const [data, setData] = useState([]);
   
@@ -27,8 +27,8 @@ const DashTable = () => {
   }, []);
 
   return (
-    <Table pagination={{ pageSize: 3,className: "pagination"}} dataSource={data} rowClassName='tableRow' style={{background:"#202125"}} key={data._id}>
-      <ColumnGroup title="Recent Transactions"key={data._id}>
+    <Table pagination={{ pageSize: 7}} dataSource={data} rowClassName='tableRow' style={{background:"#202125"}} key={data._id}>
+      <ColumnGroup title="All Transactions"key={data._id}>
       <Column title="Transaction" dataIndex="option" key="option" />
       <Column title="Amount" dataIndex="amount" key="amount" />
       <Column title="Category" dataIndex="selectedcategory" key="selectedcategory" />
@@ -39,4 +39,4 @@ const DashTable = () => {
   );
 };
 
-export default DashTable;
+export default AnalysisTable;

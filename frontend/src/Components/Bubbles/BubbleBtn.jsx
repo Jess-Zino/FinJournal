@@ -11,8 +11,8 @@ const BubbleBtn = ({operation,location, colors, click }) => {
 export default BubbleBtn
 
 BubbleBtn.propTypes = {
-  operation: PropTypes.string.isRequired, 
-  location: PropTypes.string.isRequired,
-  colors:PropTypes.string.isRequired,
-  click:PropTypes.func.isRequired
+  operation: PropTypes.string, 
+  location: PropTypes.string,
+  colors:PropTypes.string,
+  click:PropTypes.func
 };

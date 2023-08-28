@@ -7,5 +7,5 @@
     
     export default BubbleFull
 BubbleFull.propTypes ={
-  content: propTypes.element.isRequired
+  content: propTypes.element
 }

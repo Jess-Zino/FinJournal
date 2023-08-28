@@ -1,9 +1,9 @@
 import { Menu,Typography, Button} from "antd"
-import { DashboardOutlined, GiftOutlined,TrophyOutlined,ShoppingOutlined,FrownOutlined, FundOutlined,UserOutlined,  MenuFoldOutlined,
-    MenuUnfoldOutlined, } from '@ant-design/icons';
+import { DashboardOutlined, GiftOutlined,TrophyOutlined,ShoppingOutlined,FrownOutlined, FundOutlined,UserOutlined,  MenuFoldOutlined, MenuUnfoldOutlined, } from '@ant-design/icons';
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 const Navbar = () => {
+    const username = localStorage.getItem('user')
     const navigate =  useNavigate()
     const { Title } = Typography;
     const [collapsed, setCollapsed] = useState(false);
@@ -32,14 +32,14 @@ const Navbar = () => {
         items={
             [ 
             {
-                label:<Typography><Title level={5} style={{color:"white"}}>John Doe</Title></Typography>,
+                label:<Typography><Title level={5} style={{color:"white"}}>{username}</Title></Typography>,
                 disabled:"true",
                 icon:<UserOutlined  style={{ fontSize: '20px', color: 'white' }}/>,
                 },
                 {
                     label:"Dashboard",
                     icon:<DashboardOutlined   style={{ fontSize: '20px', color: 'white' }}/>,
-                    key:"/"
+                    key:"/dashboard"
                 },
                 {
                     label:"Income",
@@ -52,7 +52,7 @@ const Navbar = () => {
                     key:"/savings"
                 },
                 {
-                    label:"Expense",
+                    label:"Expenses",
                     icon:<ShoppingOutlined  style={{ fontSize: '20px', color: 'white' }}/>,
                     key:"/expense"
                 },

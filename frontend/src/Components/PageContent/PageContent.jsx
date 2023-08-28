@@ -1,9 +1,11 @@
-import AppRoutes from "../Routes/AppRoutes"
-
-const PageContent = () => {
+import propTypes from 'prop-types'
+const PageContent = ({content}) => {
   return (
-        <div className="Content"><AppRoutes/></div>
+        <div className="Content">{content}</div>
   )
 }
 
 export default PageContent
+PageContent.propTypes = {
+content: propTypes.element 
+}

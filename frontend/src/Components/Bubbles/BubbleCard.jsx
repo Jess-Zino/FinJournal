@@ -1,3 +1,4 @@
+
 import propTypes from 'prop-types'
 
 const BubbleCard = ({content}) => {
@@ -8,5 +9,5 @@ const BubbleCard = ({content}) => {
 
 export default BubbleCard
 BubbleCard.propTypes ={
-    content: propTypes.element.isRequired
+    content: propTypes.element
   }
